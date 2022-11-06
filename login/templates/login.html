@@ -1,0 +1,25 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ItaloBuy</title>
+    <link rel="stylesheet" href="{% static 'login/login.css' %}">
+</head>
+
+<body>
+    <header>Faça seu cadastro</header>
+    <form action="{% url 'login' %}" method="POST">{%csrf_token%}
+    <section>
+        <p>Nome: <input type="text" name="nome" placeholder="Digite seu nome"></p>
+        <p>Email: <input type="email" name="email" id="emailid" placeholder="Email"></p>
+        <p>CPF: <input type="text" name="cpf" placeholder="___.___.___.__"></p>
+        <p>Senha: <input type="text" name="senha" placeholder="Senha"> </p>
+        <input type="submit" value="Enviar">
+    </section>
+    </form>
+</body>
+</html>
