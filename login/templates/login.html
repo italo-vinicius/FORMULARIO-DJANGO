@@ -7,12 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PAgina do krl</title>
-    <link rel="stylesheet" href="{% static 'login/login.css' %}">
+    <link rel="stylesheet" href="login/login.css">
 </head>
 
 <body>
     <header>Tenta injetar sql ai</header>
-    <form action="{% url 'login' %}" method="POST">{%csrf_token%}
+    <form action="/login" method="POST">
     <section>
         <p>Nome: <input type="text" name="nome" placeholder="Digite seu nome"></p>
         <p>Email: <input type="email" name="email" id="emailid" placeholder="Email"></p>
